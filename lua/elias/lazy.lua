@@ -13,7 +13,6 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
   { import = "elias.plugins" },
-  { import = "elias.plugins.lsp" }
 }, {
   install = {
     colorscheme = { "catppuccin" },
