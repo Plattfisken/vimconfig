@@ -3,28 +3,28 @@ return {
     "williamboman/mason.nvim",
     config = function()
       require("mason").setup()
-    end
+    end,
   },
   {
     "williamboman/mason-lspconfig.nvim",
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = { "lua_ls", "csharp_ls", "clangd" }
+        ensure_installed = { "lua_ls", "csharp_ls", "clangd" },
       })
-    end
+    end,
   },
   {
     "neovim/nvim-lspconfig",
     config = function()
-      local lspconfig = require('lspconfig')
+      local lspconfig = require("lspconfig")
       lspconfig.lua_ls.setup({})
       lspconfig.csharp_ls.setup({})
       lspconfig.clangd.setup({})
 
       local keymap = vim.keymap
-      keymap.set('n', 'K', vim.lsp.buf.hover, {})
-      keymap.set('n', 'gd', vim.lsp.buf.definition, {})
-      keymap.set({ 'n', 'v' }, '<leader>ca', vim.lsp.buf.code_action, {})
-    end
-  }
+      keymap.set("n", "K", vim.lsp.buf.hover, {})
+      keymap.set("n", "gd", vim.lsp.buf.definition, {})
+      keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, {})
+    end,
+  },
 }
