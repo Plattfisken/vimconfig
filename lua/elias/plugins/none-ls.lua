@@ -7,7 +7,7 @@ return {
         null_ls.builtins.formatting.stylua, --lua
 
         null_ls.builtins.formatting.prettier, --javascript
-        null_ls.builtins.diagnostics.eslint,
+        -- null_ls.builtins.diagnostics.eslint,
 
       },
     })
